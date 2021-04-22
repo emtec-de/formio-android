@@ -88,6 +88,7 @@ obj/
 .idea/navEditor.xml
 .idea/assetWizardSettings.xml
 .idea/render.experimental.xml
+.idea/inspectionProfiles/
 
 # OS-specific files
 .DS_Store
