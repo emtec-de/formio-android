@@ -114,8 +114,8 @@ public class FormIoView @JvmOverloads constructor(
                 "    window.onload = function() {\n" +
                 "         Formio.createForm(document.getElementById('formio'),\n" +
                 "           ${formIoModel.formConfig},\n" +
-                "               {readOnly: ${formIoModel.readOnly}})\n" +
-                "               .then(function(form) {\n" +
+                "           ${formIoModel.formOptions},\n" +
+                "         ).then(function(form) {\n" +
                 "                   formVar = form;\n" +
                 "               " + observeFormChanges() +
                 "               " + attachFocusListener() +
@@ -228,8 +228,8 @@ public class FormIoView @JvmOverloads constructor(
  *
  * @param formConfig JSON value of form config.
  * @param formData JSON value of form data if available.
- * @param readOnly makes form editable or not. It's editable by default.
+ * @param formOptions JSON value of form options, see https://github.com/formio/formio.js/wiki/Form-Renderer#options
  */
 public data class FormIoModel(val formConfig: String?,
                               val formData: String? = "",
-                              val readOnly: Boolean = false)
+                              val formOptions: String? = "{}")
