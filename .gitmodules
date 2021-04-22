@@ -1,0 +1,3 @@
+[submodule "formio/src/main/assets/formio"]
+	path = formio/src/main/assets/formio
+	url = https://github.com/formio/formio.js.git
